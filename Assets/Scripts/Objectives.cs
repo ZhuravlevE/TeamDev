@@ -21,7 +21,20 @@ public class Objectives : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
+        if (collision.tag == "Key")
+        {
+            _audioSource.PlayOneShot(_keyUp);
+
+            _keyCount--;
+            Destroy(collision.gameObject);
+
+            if (_keyCount <= 0)
+            {
+                GameObject.FindGameObjectWithTag("CloseDoor").SetActive(false);
+
+                GameObject.FindGameObjectWithTag("OpenDoor").GetComponent<SpriteRenderer>().enabled = true;
+                GameObject.FindGameObjectWithTag("OpenDoor").GetComponent<BoxCollider2D>().enabled = true;
+
 
         if (collision.tag == "OpenDoor")
         {
