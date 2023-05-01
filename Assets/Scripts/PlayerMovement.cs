@@ -100,6 +100,15 @@ public class PlayerMovement : MonoBehaviour
         }
         else _anim.SetBool("run", false);
     }
+    private void Flip()
+    {
+        if(_facingRight && _horizontal < .0f || !_facingRight && _horizontal > .0f)
+        {
+            _facingRight = !_facingRight;
+            transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
+        }
+        facingRight = _facingRight;
+    }
 
     private bool IsGrounded()
     {
@@ -134,6 +143,24 @@ public class PlayerMovement : MonoBehaviour
         return _enableInput;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Red" || collision.tag == "Green" || collision.tag == "Yellow")
+        {
+            Dead();
+        }
+
+    }
+
+    private void Dead()
+    {
+        _audioSource.PlayOneShot(_dead);
+
+        _enableInput = false;
+        _anim.SetBool("dead", true);
+
+        transform.GetChild(3).GetComponent<SpriteRenderer>().enabled = true;
+    }
 
     public void LeftDownButton()
     {
