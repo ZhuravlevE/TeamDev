@@ -28,5 +28,5 @@ jobs:
         enable_jekyll: false
         allow_empty_commit: false
         force_orphan: true
-        publish_branch: gh-pages-docs
+        publish_branch: gh-pages
         destination_dir: docs
