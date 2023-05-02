@@ -2,22 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Класс, описывающий зеленого НИПа
-/// </summary>
 public class PhantomGreen : MonoBehaviour
 {
-    /// <summary>
-    /// Появление НИПа на уровне
-    /// </summary>
+    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    /// <summary>
-    /// Обновление положения НИПа
-    /// </summary>
+    // Update is called once per frame
     void Update()
     {
         
