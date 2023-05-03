@@ -5,8 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | tvdude</title>
   </head>
-  <body style="text-align: center">
-    <canvas id="unity-canvas" width=1280 height=1024 style="width: 1280px; height: 1024px; background: #231F20"></canvas>
+  <body style="text-align: center; background-color: #231F20";>
+    <canvas id="unity-canvas" width = auto height = auto style="width: 100%; height: 100%; background: #231F20;"></canvas>
     <script src="Build/WebGL.loader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
@@ -16,7 +16,7 @@
         streamingAssetsUrl: "StreamingAssets",
         companyName: "VyNN",
         productName: "tvdude",
-        productVersion: "0.0.49",
+        productVersion: "0.0.26",
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
