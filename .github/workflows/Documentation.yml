@@ -2,7 +2,7 @@ name: Documentation
 
 on: 
   #pull_request: {}
-  push: { branches: [development] }
+  #push: { branches: [development] }
   workflow_dispatch: {}
 
 jobs:
