@@ -1,7 +1,7 @@
 name: Documentation
 
 on: 
-  pull_request: {}
+  #pull_request: {}
   push: { branches: [development] }
   workflow_dispatch: {}
 
@@ -23,10 +23,11 @@ jobs:
     - name: GH Pages Deployment
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.DOC_GITHUB_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./Documentation/html/
         enable_jekyll: false
         allow_empty_commit: false
-        force_orphan: true
+        #force_orphan: true
         publish_branch: gh-pages
         destination_dir: docs
+        keep_files: true
