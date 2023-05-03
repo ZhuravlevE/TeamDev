@@ -11,7 +11,7 @@
 
 [p3express](../../wiki/p3express)
 
-[Документация кода](https://zhuravleve.github.io/TeamDev/docs/)
+[Документация кода](https://zhuravleve.github.io/TeamDev/docs)
 
 ## Команда
 
@@ -20,4 +20,6 @@
 ## Разработка
 
 [issue-трекер](https://github.com/users/ZhuravlevE/projects/1/)
+
+[Поиграть можно тут](https://zhuravleve.github.io/TeamDev/)
 
